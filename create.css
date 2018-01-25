@@ -1,0 +1,8 @@
+body {
+  text-align: center;
+}
+
+input:not('nameLabel') {
+  margin-bottom: 10px;
+  width: 50px;
+}
