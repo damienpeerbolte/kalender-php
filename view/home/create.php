@@ -1,22 +1,9 @@
 <?php
-include 'connection.php';
-
-$months = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"];
-if(isset($_POST['create'])) {
-  if ($_POST["day"] && $_POST["month"] && $_POST["name"] && $_POST["birth"]) {
-    $day = $_POST['day'];
-    $month = $_POST['month'];
-    $name = $_POST['name'];
-    $birth = $_POST['birth'];
-
-    $sql = "INSERT INTO verjaardagskalender (day, month, name, birth) VALUES ('$day', '$month', '$name', '$birth')";
-    $result=mysqli_query($db,$sql);
-    $sucmsg = "Person added succesfully!";
-  } else {
-    $passconferr = "NAH";
+  $months = ["Januari","Februari","Maart","April","Mei","Juni","Juli","Augustus","September","Oktober","November","December"];
+  if(isset($_POST['create'])) {
+    createBirthday();
+    header('location: ' . URL . 'home/index');
   }
-  header('Location: index.php');
-}
 ?>
 <!DOCTYPE html>
 <html>
