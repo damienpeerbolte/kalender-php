@@ -14,7 +14,7 @@
         <link href="main.css" rel="stylesheet" type="text/css">
     </head>
     <body>
-        <h1>Are you sure you want to jump out of the window?</h1>
+        <h1>Are you sure you want to delete the birthday with ID:<?php echo $id ?></h1>
         <form class="" method="post">
           <input type="submit" name="yes" value="Yes">
           <input type="submit" name="no" value="No">

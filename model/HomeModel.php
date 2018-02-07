@@ -31,10 +31,11 @@
   	$sql = "INSERT INTO verjaardagskalender (day, month, name, birth) VALUES ('$day', '$month', '$name', '$birth')";
   	$query = $db->prepare($sql);
   	$query->execute(array(
-  		':day' => $firstname,
-  		':month' => $lastname,
-  		':name' => $gender,
-      ':birth'));
+  		':day' => $day,
+  		':month' => $month,
+  		':name' => $name,
+      ':birth' => $birth
+    ));
   	$db = null;
   }
 
